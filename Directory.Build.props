@@ -1,0 +1,16 @@
+<Project>
+  <!-- Gilt für alle Projekte der Lösung. Änderungen nur mit Andrés Freigabe (gelb). -->
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <!-- Warnungen sind Fehler: Probleme werden behoben, nicht übersehen. -->
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <!-- Reproduzierbare Builds: Lock-Files halten Paketversionen samt Hash fest. -->
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Typit.Core/Typit.Core.csproj" />
+    <Project Path="src/Typit/Typit.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Typit.Core.Tests/Typit.Core.Tests.csproj" />
+  </Folder>
+</Solution>

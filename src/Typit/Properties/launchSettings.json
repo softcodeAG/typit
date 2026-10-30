@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Typit (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Typit (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

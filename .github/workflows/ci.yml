@@ -1,0 +1,40 @@
+# CI: baut und testet jeden Pull Request und jeden Stand auf main.
+# Der Job-Name "build-test" ist im Ruleset als Pflicht-Check eingetragen. Nicht umbenennen.
+# Action-Versionen hält Dependabot aktuell.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test:
+    name: build-test
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - name: Code auschecken
+        uses: actions/checkout@v6
+
+      - name: .NET laut global.json einrichten
+        uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: global.json
+
+      - name: Pakete wiederherstellen (nur gesperrte Versionen)
+        run: dotnet restore --locked-mode
+
+      - name: Bauen (Warnungen sind Fehler)
+        run: dotnet build --no-restore --configuration Release -warnaserror
+
+      - name: Testen
+        run: dotnet test --no-build --configuration Release

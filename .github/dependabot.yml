@@ -1,0 +1,16 @@
+# Schlägt wöchentlich Updates für NuGet-Pakete und GitHub Actions als Pull Requests vor.
+# Geprüft und gemerged wird in Phase 7 (Wartung).
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      nuget-minor-patch:
+        update-types: ["minor", "patch"]
+    open-pull-requests-limit: 5
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

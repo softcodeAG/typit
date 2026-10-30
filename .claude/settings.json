@@ -1,0 +1,77 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet build *)",
+      "Bash(dotnet test *)",
+      "Bash(dotnet restore *)",
+      "Bash(dotnet run *)",
+      "Bash(dotnet format *)",
+      "Bash(dotnet list *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git show *)",
+      "Bash(git branch *)",
+      "Bash(git switch *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git pull --ff-only *)",
+      "Bash(gh pr view *)",
+      "Bash(gh pr checks *)",
+      "Bash(gh pr list *)",
+      "Bash(gh run list *)",
+      "Bash(gh run view *)",
+      "Bash(gh run watch *)",
+      "Bash(winapp ui *)",
+      "mcp__microsoft-learn"
+    ],
+    "ask": [
+      "Bash(git push *)",
+      "Bash(git tag *)",
+      "Bash(gh pr create *)",
+      "Bash(gh api *)",
+      "Bash(gh repo *)",
+      "Bash(gh release *)",
+      "Bash(dotnet add *)",
+      "Bash(dotnet new *)",
+      "Bash(dotnet publish *)",
+      "Bash(winget *)",
+      "Bash(winapp pack *)",
+      "Bash(winapp store *)",
+      "Edit(./.claude/**)",
+      "Edit(./.github/**)",
+      "Edit(./CLAUDE.md)",
+      "Edit(./Directory.Build.props)",
+      "Edit(./Directory.Packages.props)",
+      "Edit(./global.json)"
+    ],
+    "deny": [
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git push --force-with-lease *)",
+      "Bash(git reset --hard *)",
+      "Bash(git rebase *)",
+      "Bash(git tag -d *)",
+      "Bash(git tag -f *)",
+      "Bash(gh pr merge *)",
+      "Bash(gh repo delete *)",
+      "Bash(gh release delete *)",
+      "Read(./**/*.pfx)",
+      "Read(./**/*.p12)",
+      "Read(./**/.env*)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"$CLAUDE_PROJECT_DIR/.claude/hooks/verify.ps1\"",
+            "timeout": 600
+          }
+        ]
+      }
+    ]
+  }
+}
