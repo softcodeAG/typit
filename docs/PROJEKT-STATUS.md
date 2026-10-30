@@ -4,15 +4,15 @@
 
 - **Werkstatt-Version:** 1.1.0
 - **Zuletzt aktualisiert:** 2026-10-30
-- **Aktuelle Phase:** 1 – Projekt anlegen (fast abgeschlossen)
-- **Branch:** main (nur bis die Schutzregeln aktiv sind)
+- **Aktuelle Phase:** 2 – Interview & SPEC (begonnen)
+- **Branch:** docs/spec
 - **Letztes Release:** –
 
 ## Wo stehen wir
-Skelett kopiert, Lösung `Typit.slnx` mit drei Projekten baut ohne Warnungen, 2 Tests grün,
-André hat das App-Fenster gesehen. Qualitätstor `verify.ps1` direkt getestet (0/2/0).
-Microsoft-Learn-MCP in `.mcp.json`. ADR-0002 (öffentliches Repo) und ADR-0003 (WinUI-Analyzer,
-feste Paketversionen) angelegt. Repo `softcodeAG/typit` und Schutzregeln folgen mit diesem Commit.
+Phase 1 abgeschlossen und von André freigegeben (2026-10-30): Repo `softcodeAG/typit`
+öffentlich (ADR-0002), CI grün, Rulesets `main-schutz` und `release-tags-schutz` aktiv,
+Stop-Hook in neuer Session geprüft (blockiert bei Build-Fehler, lässt sauberen Stand durch).
+Phase 2 läuft: Auftragsklärung (2.1) an André übergeben.
 
 ## Inkremente
 | ID | Titel | Status |
@@ -21,15 +21,15 @@ feste Paketversionen) angelegt. Repo `softcodeAG/typit` und Schutzregeln folgen 
 
 ## Hot List (höchstens drei)
 - Repo öffentlich (ADR-0002): keine echten Sprachaufnahmen, Transkripte oder Secrets ins Repo.
+- Fünf Dependabot-PRs offen (#1, #2, #4, #5, #6), CI rot, weil vor dem CI-Fix gestartet. Nicht mergen, gesondert prüfen.
 
 ## Offene Fragen und Annahmen
-- Zweck laut André (2026-10-30): systemweites Diktieren per gedrückter Tastenkombination in jedes Textfeld, Bereinigung von Füllwörtern („ähm“) ohne LLM. Später evtl. Aufgaben/Notizen an To-do- bzw. Notiz-App übergeben. Details im Interview (Phase 2).
+- Zweck laut André (2026-10-30): systemweites Diktieren per gedrückter Tastenkombination in jedes Textfeld, Bereinigung von Füllwörtern („ähm“) ohne LLM. Später evtl. Aufgaben/Notizen an To-do- bzw. Notiz-App übergeben.
 - Annahme: Git-Anzeigename „softcodeAG“; lässt sich jederzeit ändern.
 
 ## Nächster Schritt (genau einer)
-1.11 Hook-Verkabelung in einer neuen Session prüfen, dann Phase 2 (Interview & SPEC).
+2.1 Auftragsklärung: Andrés Antworten auf die drei kritischen Rückfragen und Annahmen einarbeiten, dann Interview in Runden (2.2).
 
 ## Handoff
-Wenn du weitermachst, starte hier: in der Claude-App eine neue Session im Ordner
-`C:\Users\info\Claude Code\apps\typit` öffnen → `/app-werkstatt weiter`.
-Den Projekteinstellungen und dem MCP-Server aus `.mcp.json` beim ersten Start vertrauen.
+Wenn du weitermachst, starte hier: Session im Ordner `C:\Users\info\Claude Code\apps\typit`
+öffnen → `/app-werkstatt weiter`. Branch `docs/spec`.
