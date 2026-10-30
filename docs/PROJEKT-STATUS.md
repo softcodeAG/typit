@@ -4,32 +4,29 @@
 
 - **Werkstatt-Version:** 1.1.0
 - **Zuletzt aktualisiert:** 2026-10-30
-- **Aktuelle Phase:** 1 – Projekt anlegen (fast abgeschlossen)
-- **Branch:** main (nur bis die Schutzregeln aktiv sind)
-- **Letztes Release:** –
+- **Aktuelle Phase:** beendet in Phase 2 (Auftragsklärung), Entscheidung von André am 2026-10-30
+- **Branch:** docs/close-project
+- **Letztes Release:** – (keins)
 
 ## Wo stehen wir
-Skelett kopiert, Lösung `Typit.slnx` mit drei Projekten baut ohne Warnungen, 2 Tests grün,
-André hat das App-Fenster gesehen. Qualitätstor `verify.ps1` direkt getestet (0/2/0).
-Microsoft-Learn-MCP in `.mcp.json`. ADR-0002 (öffentliches Repo) und ADR-0003 (WinUI-Analyzer,
-feste Paketversionen) angelegt. Repo `softcodeAG/typit` und Schutzregeln folgen mit diesem Commit.
+Phase 1 abgeschlossen und freigegeben. In der Auftragsklärung (2.1) hat sich gezeigt, dass das
+in Windows 11 eingebaute Diktieren (Windows-Taste + H) Andrés Bedarf bereits gut abdeckt.
+André hat entschieden, das Projekt zu beenden. Es gibt keinen Code über das Skelett hinaus und
+keine SPEC. Das Repo `softcodeAG/typit` bleibt bestehen; ob es archiviert wird, entscheidet André.
 
 ## Inkremente
 | ID | Titel | Status |
 |---|---|---|
-| – | folgt in Phase 3 | – |
+| – | keine (Projekt vor der SPEC beendet) | – |
 
 ## Hot List (höchstens drei)
-- Repo öffentlich (ADR-0002): keine echten Sprachaufnahmen, Transkripte oder Secrets ins Repo.
+- Fünf Dependabot-PRs offen (#1, #2, #4, #5, #6). Bei beendetem Projekt nicht mergen; schließen oder mit dem Repo archivieren entscheidet André.
 
 ## Offene Fragen und Annahmen
-- Zweck laut André (2026-10-30): systemweites Diktieren per gedrückter Tastenkombination in jedes Textfeld, Bereinigung von Füllwörtern („ähm“) ohne LLM. Später evtl. Aufgaben/Notizen an To-do- bzw. Notiz-App übergeben. Details im Interview (Phase 2).
-- Annahme: Git-Anzeigename „softcodeAG“; lässt sich jederzeit ändern.
+- Spätere Idee (Aufgaben/Notizen per Sprache an To-do- bzw. Notiz-App übergeben) ist nicht umgesetzt. Sie würde als neues Projekt bei Phase 2 beginnen und Windows-Taste + H zum Diktieren nutzen.
 
 ## Nächster Schritt (genau einer)
-1.11 Hook-Verkabelung in einer neuen Session prüfen, dann Phase 2 (Interview & SPEC).
+Keiner. André entscheidet, ob das Repo bei GitHub archiviert wird.
 
 ## Handoff
-Wenn du weitermachst, starte hier: in der Claude-App eine neue Session im Ordner
-`C:\Users\info\Claude Code\apps\typit` öffnen → `/app-werkstatt weiter`.
-Den Projekteinstellungen und dem MCP-Server aus `.mcp.json` beim ersten Start vertrauen.
+Projekt beendet. Wird die To-do-Idee aufgegriffen: `/app-werkstatt neu <app-name>` im Apps-Ordner.
