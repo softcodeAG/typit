@@ -4,32 +4,29 @@
 
 - **Werkstatt-Version:** 1.1.0
 - **Zuletzt aktualisiert:** 2026-10-30
-- **Aktuelle Phase:** 2 – Interview & SPEC (begonnen)
-- **Branch:** docs/spec
-- **Letztes Release:** –
+- **Aktuelle Phase:** beendet in Phase 2 (Auftragsklärung), Entscheidung von André am 2026-10-30
+- **Branch:** docs/close-project
+- **Letztes Release:** – (keins)
 
 ## Wo stehen wir
-Phase 1 abgeschlossen und von André freigegeben (2026-10-30): Repo `softcodeAG/typit`
-öffentlich (ADR-0002), CI grün, Rulesets `main-schutz` und `release-tags-schutz` aktiv,
-Stop-Hook in neuer Session geprüft (blockiert bei Build-Fehler, lässt sauberen Stand durch).
-Phase 2 läuft: Auftragsklärung (2.1) an André übergeben.
+Phase 1 abgeschlossen und freigegeben. In der Auftragsklärung (2.1) hat sich gezeigt, dass das
+in Windows 11 eingebaute Diktieren (Windows-Taste + H) Andrés Bedarf bereits gut abdeckt.
+André hat entschieden, das Projekt zu beenden. Es gibt keinen Code über das Skelett hinaus und
+keine SPEC. Das Repo `softcodeAG/typit` bleibt bestehen; ob es archiviert wird, entscheidet André.
 
 ## Inkremente
 | ID | Titel | Status |
 |---|---|---|
-| – | folgt in Phase 3 | – |
+| – | keine (Projekt vor der SPEC beendet) | – |
 
 ## Hot List (höchstens drei)
-- Repo öffentlich (ADR-0002): keine echten Sprachaufnahmen, Transkripte oder Secrets ins Repo.
-- Fünf Dependabot-PRs offen (#1, #2, #4, #5, #6), CI rot, weil vor dem CI-Fix gestartet. Nicht mergen, gesondert prüfen.
+- Fünf Dependabot-PRs offen (#1, #2, #4, #5, #6). Bei beendetem Projekt nicht mergen; schließen oder mit dem Repo archivieren entscheidet André.
 
 ## Offene Fragen und Annahmen
-- Zweck laut André (2026-10-30): systemweites Diktieren per gedrückter Tastenkombination in jedes Textfeld, Bereinigung von Füllwörtern („ähm“) ohne LLM. Später evtl. Aufgaben/Notizen an To-do- bzw. Notiz-App übergeben.
-- Annahme: Git-Anzeigename „softcodeAG“; lässt sich jederzeit ändern.
+- Spätere Idee (Aufgaben/Notizen per Sprache an To-do- bzw. Notiz-App übergeben) ist nicht umgesetzt. Sie würde als neues Projekt bei Phase 2 beginnen und Windows-Taste + H zum Diktieren nutzen.
 
 ## Nächster Schritt (genau einer)
-2.1 Auftragsklärung: Andrés Antworten auf die drei kritischen Rückfragen und Annahmen einarbeiten, dann Interview in Runden (2.2).
+Keiner. André entscheidet, ob das Repo bei GitHub archiviert wird.
 
 ## Handoff
-Wenn du weitermachst, starte hier: Session im Ordner `C:\Users\info\Claude Code\apps\typit`
-öffnen → `/app-werkstatt weiter`. Branch `docs/spec`.
+Projekt beendet. Wird die To-do-Idee aufgegriffen: `/app-werkstatt neu <app-name>` im Apps-Ordner.
