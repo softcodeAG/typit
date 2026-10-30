@@ -23,7 +23,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Code auschecken
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: .NET laut global.json einrichten
         uses: actions/setup-dotnet@v5
