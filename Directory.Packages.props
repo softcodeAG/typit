@@ -7,11 +7,11 @@
   </PropertyGroup>
   <!-- Versionen geprüft auf nuget.org am 2026-10-30 (jeweils neueste stabile). -->
   <ItemGroup Label="App">
-    <PackageVersion Include="Microsoft.WindowsAppSDK" Version="2.6.4" />
+    <PackageVersion Include="Microsoft.WindowsAppSDK" Version="2.6.5" />
     <PackageVersion Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.2957" />
-    <PackageVersion Include="Microsoft.Windows.SDK.BuildTools.WinApp" Version="0.7.1" />
+    <PackageVersion Include="Microsoft.Windows.SDK.BuildTools.WinApp" Version="0.8.0" />
     <!-- Analyzer, nur zur Build-Zeit (ADR-0003). -->
-    <PackageVersion Include="Microsoft.Windows.SDK.BuildTools.WinUIAnalyzer" Version="0.7.1" />
+    <PackageVersion Include="Microsoft.Windows.SDK.BuildTools.WinUIAnalyzer" Version="0.8.0" />
   </ItemGroup>
   <ItemGroup Label="Core">
     <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.4.2" />
@@ -19,8 +19,8 @@
   <!-- Testpakete in den Versionen der xunit-Vorlage aus .NET SDK 10.0.403. -->
   <ItemGroup Label="Tests">
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.2" />
     <PackageVersion Include="xunit" Version="2.9.3" />
-    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.4" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
   </ItemGroup>
 </Project>
